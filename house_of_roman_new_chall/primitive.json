@@ -1,0 +1,221 @@
+[
+    {
+        "ins_index": 0,
+        "ins_type": "single_ins",
+        "ins_num": 1,
+        "ops": [
+            {
+                "op_index": 0,
+                "op_name": "symtag1",
+                "op_input_byte": "000000000000000000000000000000",
+                "type": "input"
+            }
+        ],
+        "max_use_num": 1,
+        "depend_index": -1,
+        "primitive": [
+            {
+                "operation_name": "read_object",
+                "operation_correlation": [
+                    {
+                        "name": "size",
+                        "value": "0x1e",
+                        "tag": "concrete"
+                    },
+                    {
+                        "name": "buf",
+                        "value": "0x602140",
+                        "tag": []
+                    },
+                    {
+                        "name": "content",
+                        "value": "0x303030303030303030303030303030303030303030303030303030303030",
+                        "tag": []
+                    }
+                ],
+                "current_byte_offset": 30,
+                "exe_num": 1
+            }
+        ]
+    },
+    {
+        "ins_index": 1,
+        "ins_type": "Compound_ins",
+        "ins_num": 3,
+        "ops": [
+            {
+                "op_index": 1,
+                "op_name": "symtag2",
+                "op_input_byte": "0001",
+                "type": "fixed",
+                "func": "scanf"
+            },
+            {
+                "op_index": 2,
+                "op_name": "symtag3",
+                "op_input_byte": "0008",
+                "type": "input",
+                "func": "scanf"
+            },
+            {
+                "op_index": 3,
+                "op_name": "symtag4",
+                "op_input_byte": "0000",
+                "type": "input",
+                "func": "scanf"
+            }
+        ],
+        "max_use_num": 20,
+        "depend_index": -1,
+        "primitive": [
+            {
+                "operation_name": "scanf_object",
+                "current_byte_offset": 34,
+                "exe_num": 1
+            },
+            {
+                "operation_name": "scanf_object",
+                "current_byte_offset": 38,
+                "exe_num": 1
+            },
+            {
+                "operation_name": "scanf_object",
+                "current_byte_offset": 42,
+                "exe_num": 1
+            },
+            {
+                "operation_name": "malloc_object",
+                "operation_correlation": [
+                    {
+                        "name": "size",
+                        "value": [
+                            "0x8",
+                            "0x8"
+                        ],
+                        "tag": "symbolic"
+                    },
+                    {
+                        "name": "ret_addr",
+                        "value": "0xc0000f20",
+                        "tag": []
+                    }
+                ],
+                "current_byte_offset": 42,
+                "exe_num": 1
+            }
+        ]
+    },
+    {
+        "ins_index": 2,
+        "ins_type": "Compound_ins",
+        "ins_num": 1,
+        "ops": [
+            {
+                "op_index": 4,
+                "op_name": "symtag5",
+                "op_input_byte": "0002",
+                "type": "fixed",
+                "func": "scanf"
+            },
+            {
+                "op_index": 5,
+                "op_name": "symtag6",
+                "op_input_byte": "0000",
+                "type": "input",
+                "func": "scanf"
+            },
+            {
+                "op_index": 6,
+                "op_name": "symtag7",
+                "op_input_byte": "aaaaaaaaa",
+                "type": "input"
+            }
+        ],
+        "max_use_num": 20,
+        "depend_index": 0,
+        "primitive": [
+            {
+                "operation_name": "scanf_object",
+                "current_byte_offset": 46,
+                "exe_num": 1
+            },
+            {
+                "operation_name": "scanf_object",
+                "current_byte_offset": 50,
+                "exe_num": 1
+            },
+            {
+                "operation_name": "read_object",
+                "operation_correlation": [
+                    {
+                        "name": "size",
+                        "value": [
+                            "0x9",
+                            "0x9"
+                        ],
+                        "tag": "symbolic"
+                    },
+                    {
+                        "name": "buf",
+                        "value": "0xc0000f20",
+                        "tag": []
+                    },
+                    {
+                        "name": "content",
+                        "value": "0x616161616161616161",
+                        "tag": []
+                    }
+                ],
+                "current_byte_offset": 59,
+                "exe_num": 1
+            }
+        ]
+    },
+    {
+        "ins_index": 3,
+        "ins_type": "Compound_ins",
+        "ins_num": 1,
+        "ops": [
+            {
+                "op_index": 7,
+                "op_name": "symtag8",
+                "op_input_byte": "0003",
+                "type": "fixed",
+                "func": "scanf"
+            },
+            {
+                "op_index": 8,
+                "op_name": "symtag9",
+                "op_input_byte": "0000",
+                "type": "input",
+                "func": "scanf"
+            }
+        ],
+        "max_use_num": 20,
+        "depend_index": 0,
+        "primitive": [
+            {
+                "operation_name": "scanf_object",
+                "current_byte_offset": 63,
+                "exe_num": 1
+            },
+            {
+                "operation_name": "scanf_object",
+                "current_byte_offset": 67,
+                "exe_num": 1
+            },
+            {
+                "operation_name": "free_object",
+                "operation_correlation": [
+                    {
+                        "name": "free_addr",
+                        "value": "0xc0000f20",
+                        "tag": []
+                    }
+                ],
+                "current_byte_offset": 67,
+                "exe_num": 1
+            }
+        ]
+    }
+]

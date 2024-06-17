@@ -1,0 +1,250 @@
+[
+    {
+        "ins_index": 0,
+        "ins_type": "single_ins",
+        "ins_num": 1,
+        "ops": [
+            {
+                "op_index": 0,
+                "op_name": "symtag1",
+                "op_input_byte": "aaaaaaaaaaaaaaaa",
+                "type": "input"
+            }
+        ],
+        "max_use_num": 1,
+        "depend_index": -1,
+        "primitive": [
+            {
+                "operation_name": "read_object",
+                "operation_correlation": [
+                    {
+                        "name": "size",
+                        "value": [
+                            "0x10",
+                            "0x10"
+                        ],
+                        "tag": "symbolic"
+                    },
+                    {
+                        "name": "buf",
+                        "value": "0x601860",
+                        "tag": []
+                    },
+                    {
+                        "name": "content",
+                        "value": "0x61616161616161616161616161616161",
+                        "tag": []
+                    }
+                ],
+                "current_byte_offset": 16,
+                "exe_num": 1
+            }
+        ]
+    },
+    {
+        "ins_index": 1,
+        "ins_type": "Compound_ins",
+        "ins_num": 3,
+        "ops": [
+            {
+                "op_index": 1,
+                "op_name": "symtag2",
+                "op_input_byte": "0001000000000000",
+                "type": "fixed"
+            },
+            {
+                "op_index": 2,
+                "op_name": "symtag3",
+                "op_input_byte": "bbbbbbbbbbbbbbbb",
+                "type": "input"
+            },
+            {
+                "op_index": 3,
+                "op_name": "symtag4",
+                "op_input_byte": "0089000000000000",
+                "type": "input"
+            }
+        ],
+        "max_use_num": 40,
+        "depend_index": -1,
+        "primitive": [
+            {
+                "operation_name": "read_object",
+                "operation_correlation": [
+                    {
+                        "name": "size",
+                        "value": [
+                            "0x10",
+                            "0x10"
+                        ],
+                        "tag": "symbolic"
+                    },
+                    {
+                        "name": "buf",
+                        "value": "0x7fffffffffeff30",
+                        "tag": []
+                    },
+                    {
+                        "name": "content",
+                        "value": "0x30303031303030303030303030303030",
+                        "tag": []
+                    }
+                ],
+                "current_byte_offset": 32,
+                "exe_num": 1
+            },
+            {
+                "operation_name": "read_object",
+                "operation_correlation": [
+                    {
+                        "name": "size",
+                        "value": [
+                            "0x10",
+                            "0x10"
+                        ],
+                        "tag": "symbolic"
+                    },
+                    {
+                        "name": "buf",
+                        "value": "0x7fffffffffeff20",
+                        "tag": []
+                    },
+                    {
+                        "name": "content",
+                        "value": "0x62626262626262626262626262626262",
+                        "tag": []
+                    }
+                ],
+                "current_byte_offset": 48,
+                "exe_num": 1
+            },
+            {
+                "operation_name": "read_object",
+                "operation_correlation": [
+                    {
+                        "name": "size",
+                        "value": [
+                            "0x10",
+                            "0x10"
+                        ],
+                        "tag": "symbolic"
+                    },
+                    {
+                        "name": "buf",
+                        "value": "0x7fffffffffeff00",
+                        "tag": []
+                    },
+                    {
+                        "name": "content",
+                        "value": "0x30303839303030303030303030303030",
+                        "tag": []
+                    }
+                ],
+                "current_byte_offset": 64,
+                "exe_num": 1
+            },
+            {
+                "operation_name": "malloc_object",
+                "operation_correlation": [
+                    {
+                        "name": "size",
+                        "value": "0x30",
+                        "tag": "concrete"
+                    },
+                    {
+                        "name": "ret_addr",
+                        "value": "0xc0000f20",
+                        "tag": []
+                    }
+                ],
+                "current_byte_offset": 64,
+                "exe_num": 1
+            }
+        ]
+    },
+    {
+        "ins_index": 2,
+        "ins_type": "Compound_ins",
+        "ins_num": 2,
+        "ops": [
+            {
+                "op_index": 4,
+                "op_name": "symtag5",
+                "op_input_byte": "0005000000000000",
+                "type": "fixed"
+            },
+            {
+                "op_index": 5,
+                "op_name": "symtag6",
+                "op_input_byte": "0000000000000000",
+                "type": "input"
+            }
+        ],
+        "max_use_num": 40,
+        "depend_index": 0,
+        "primitive": [
+            {
+                "operation_name": "read_object",
+                "operation_correlation": [
+                    {
+                        "name": "size",
+                        "value": [
+                            "0x10",
+                            "0x10"
+                        ],
+                        "tag": "symbolic"
+                    },
+                    {
+                        "name": "buf",
+                        "value": "0x7fffffffffeff30",
+                        "tag": []
+                    },
+                    {
+                        "name": "content",
+                        "value": "0x30303035303030303030303030303030",
+                        "tag": []
+                    }
+                ],
+                "current_byte_offset": 80,
+                "exe_num": 1
+            },
+            {
+                "operation_name": "read_object",
+                "operation_correlation": [
+                    {
+                        "name": "size",
+                        "value": [
+                            "0x10",
+                            "0x10"
+                        ],
+                        "tag": "symbolic"
+                    },
+                    {
+                        "name": "buf",
+                        "value": "0x7fffffffffeff10",
+                        "tag": []
+                    },
+                    {
+                        "name": "content",
+                        "value": "0x30303030303030303030303030303030",
+                        "tag": []
+                    }
+                ],
+                "current_byte_offset": 96,
+                "exe_num": 1
+            },
+            {
+                "operation_name": "free_object",
+                "operation_correlation": [
+                    {
+                        "name": "free_addr",
+                        "value": "0xc0000f20",
+                        "tag": []
+                    }
+                ],
+                "current_byte_offset": 96,
+                "exe_num": 1
+            }
+        ]
+    }
+]

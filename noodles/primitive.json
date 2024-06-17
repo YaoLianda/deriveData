@@ -1,0 +1,171 @@
+[
+    {
+        "ins_index": 0,
+        "ins_type": "Compound_ins",
+        "ins_num": 1,
+        "ops": [
+            {
+                "op_index": 0,
+                "op_name": "symtag1",
+                "op_input_byte": "0001",
+                "type": "fixed"
+            }
+        ],
+        "max_use_num": 10,
+        "depend_index": -1,
+        "primitive": [
+            {
+                "operation_name": "read_object",
+                "operation_correlation": [
+                    {
+                        "name": "size",
+                        "value": "0x4",
+                        "tag": "concrete"
+                    },
+                    {
+                        "name": "buf",
+                        "value": "0x7fffffffffeff1c",
+                        "tag": []
+                    },
+                    {
+                        "name": "content",
+                        "value": "0x30303031",
+                        "tag": []
+                    }
+                ],
+                "current_byte_offset": 4,
+                "exe_num": 1
+            },
+            {
+                "operation_name": "malloc_object",
+                "operation_correlation": [
+                    {
+                        "name": "size",
+                        "value": [
+                            "0x400",
+                            "0x400"
+                        ],
+                        "tag": "symbolic"
+                    },
+                    {
+                        "name": "ret_addr",
+                        "value": "0xc0000f20",
+                        "tag": []
+                    }
+                ],
+                "current_byte_offset": 4,
+                "exe_num": 1
+            }
+        ]
+    },
+    {
+        "ins_index": 1,
+        "ins_type": "Compound_ins",
+        "ins_num": 1,
+        "ops": [
+            {
+                "op_index": 1,
+                "op_name": "symtag2",
+                "op_input_byte": "0002",
+                "type": "fixed"
+            }
+        ],
+        "max_use_num": 10,
+        "depend_index": -1,
+        "primitive": [
+            {
+                "operation_name": "read_object",
+                "operation_correlation": [
+                    {
+                        "name": "size",
+                        "value": "0x4",
+                        "tag": "concrete"
+                    },
+                    {
+                        "name": "buf",
+                        "value": "0x7fffffffffeff1c",
+                        "tag": []
+                    },
+                    {
+                        "name": "content",
+                        "value": "0x30303032",
+                        "tag": []
+                    }
+                ],
+                "current_byte_offset": 8,
+                "exe_num": 1
+            },
+            {
+                "operation_name": "malloc_object",
+                "operation_correlation": [
+                    {
+                        "name": "size",
+                        "value": [
+                            "0x40",
+                            "0x40"
+                        ],
+                        "tag": "symbolic"
+                    },
+                    {
+                        "name": "ret_addr",
+                        "value": "0xc0001320",
+                        "tag": []
+                    }
+                ],
+                "current_byte_offset": 8,
+                "exe_num": 1
+            }
+        ]
+    },
+    {
+        "ins_index": 2,
+        "ins_type": "Compound_ins",
+        "ins_num": 1,
+        "ops": [
+            {
+                "op_index": 2,
+                "op_name": "symtag3",
+                "op_input_byte": "0003",
+                "type": "fixed"
+            }
+        ],
+        "max_use_num": 10,
+        "depend_index": 1,
+        "primitive": [
+            {
+                "operation_name": "read_object",
+                "operation_correlation": [
+                    {
+                        "name": "size",
+                        "value": "0x4",
+                        "tag": "concrete"
+                    },
+                    {
+                        "name": "buf",
+                        "value": "0x7fffffffffeff1c",
+                        "tag": []
+                    },
+                    {
+                        "name": "content",
+                        "value": "0x30303033",
+                        "tag": []
+                    }
+                ],
+                "current_byte_offset": 12,
+                "exe_num": 1
+            },
+            {
+                "operation_name": "free_object",
+                "operation_correlation": [
+                    {
+                        "name": "free_addr",
+                        "value": "0xc0001320",
+                        "tag": []
+                    }
+                ],
+                "current_byte_offset": 12,
+                "exe_num": 1
+            }
+        ]
+    }
+]

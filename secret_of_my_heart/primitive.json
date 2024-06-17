@@ -1,0 +1,149 @@
+[
+    {
+        "ins_index": -1,
+        "ops": "main_primitive",
+        "primitive": [
+            {
+                "operation_name": "malloc_object",
+                "operation_correlation": [
+                    {
+                        "name": "size",
+                        "value": "0x1000",
+                        "tag": "concrete"
+                    },
+                    {
+                        "name": "ret_addr",
+                        "value": "0xc0000f20",
+                        "tag": []
+                    }
+                ],
+                "current_byte_offset": 0,
+                "exe_num": 1
+            }
+        ],
+        "max_use_num": 1
+    },
+    {
+        "ins_index": 0,
+        "ins_type": "Compound_ins",
+        "ins_num": 3,
+        "ops": [
+            {
+                "op_index": 0,
+                "op_name": "symtag1",
+                "op_input_byte": "0001",
+                "type": "fixed"
+            },
+            {
+                "op_index": 1,
+                "op_name": "symtag2",
+                "op_input_byte": "0004",
+                "type": "input"
+            },
+            {
+                "op_index": 2,
+                "op_name": "symtag3",
+                "op_input_byte": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                "type": "input"
+            },
+            {
+                "op_index": 3,
+                "op_name": "symtag4",
+                "op_input_byte": "aaaa",
+                "type": "input"
+            }
+        ],
+        "max_use_num": 100,
+        "depend_index": -1,
+        "primitive": [
+            {
+                "operation_name": "read_object",
+                "operation_correlation": [
+                    {
+                        "name": "size",
+                        "value": "0x4",
+                        "tag": "concrete"
+                    },
+                    {
+                        "name": "buf",
+                        "value": "0x7fffffffffeff10",
+                        "tag": []
+                    },
+                    {
+                        "name": "content",
+                        "value": "0x30303031",
+                        "tag": []
+                    }
+                ],
+                "current_byte_offset": 4,
+                "exe_num": 1
+            },
+            {
+                "operation_name": "read_object",
+                "operation_correlation": [
+                    {
+                        "name": "size",
+                        "value": "0x4",
+                        "tag": "concrete"
+                    },
+                    {
+                        "name": "buf",
+                        "value": "0x7fffffffffefef0",
+                        "tag": []
+                    },
+                    {
+                        "name": "content",
+                        "value": "0x30303034",
+                        "tag": []
+                    }
+                ],
+                "current_byte_offset": 8,
+                "exe_num": 1
+            },
+            {
+                "operation_name": "read_object",
+                "operation_correlation": [
+                    {
+                        "name": "size",
+                        "value": "0x4",
+                        "tag": "concrete"
+                    },
+                    {
+                        "name": "buf",
+                        "value": "0x7fffffffffefef0",
+                        "tag": []
+                    },
+                    {
+                        "name": "content",
+                        "value": "0x30303034",
+                        "tag": []
+                    }
+                ],
+                "current_byte_offset": 8,
+                "exe_num": 1
+            },
+            {
+                "operation_name": "read_object",
+                "operation_correlation": [
+                    {
+                        "name": "size",
+                        "value": "0x4",
+                        "tag": "concrete"
+                    },
+                    {
+                        "name": "buf",
+                        "value": "0x7fffffffffefef0",
+                        "tag": []
+                    },
+                    {
+                        "name": "content",
+                        "value": "0x30303034",
+                        "tag": []
+                    }
+                ],
+                "current_byte_offset": 8,
+                "exe_num": 1
+            }
+        ]
+    }
+]

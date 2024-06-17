@@ -1,0 +1,137 @@
+[
+    {
+        "ins_index": 0,
+        "ins_type": "Compound_ins",
+        "ins_num": 2,
+        "ops": [
+            {
+                "op_index": 0,
+                "op_name": "symtag1",
+                "op_input_byte": "00010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                "type": "fixed"
+            },
+            {
+                "op_index": 1,
+                "op_name": "symtag2",
+                "op_input_byte": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                "type": "input"
+            }
+        ],
+        "max_use_num": 10,
+        "depend_index": -1,
+        "primitive": [
+            {
+                "operation_name": "read_object",
+                "operation_correlation": [
+                    {
+                        "name": "size",
+                        "value": "0x80",
+                        "tag": "concrete"
+                    },
+                    {
+                        "name": "buf",
+                        "value": "0x7fffffffffefed0",
+                        "tag": []
+                    },
+                    {
+                        "name": "content",
+                        "value": "0x3030303130303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030",
+                        "tag": []
+                    }
+                ],
+                "current_byte_offset": 128,
+                "exe_num": 1
+            },
+            {
+                "operation_name": "malloc_object",
+                "operation_correlation": [
+                    {
+                        "name": "size",
+                        "value": "0x40",
+                        "tag": "concrete"
+                    },
+                    {
+                        "name": "ret_addr",
+                        "value": "0xc0000f20",
+                        "tag": []
+                    }
+                ],
+                "current_byte_offset": 128,
+                "exe_num": 1
+            },
+            {
+                "operation_name": "read_object",
+                "operation_correlation": [
+                    {
+                        "name": "size",
+                        "value": "0x40",
+                        "tag": "concrete"
+                    },
+                    {
+                        "name": "buf",
+                        "value": "0xc0000f20",
+                        "tag": []
+                    },
+                    {
+                        "name": "content",
+                        "value": "0x61616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161",
+                        "tag": []
+                    }
+                ],
+                "current_byte_offset": 192,
+                "exe_num": 1
+            }
+        ]
+    },
+    {
+        "ins_index": 1,
+        "ins_type": "Compound_ins",
+        "ins_num": 1,
+        "ops": [
+            {
+                "op_index": 2,
+                "op_name": "symtag3",
+                "op_input_byte": "00030000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                "type": "fixed"
+            }
+        ],
+        "max_use_num": 10,
+        "depend_index": 0,
+        "primitive": [
+            {
+                "operation_name": "read_object",
+                "operation_correlation": [
+                    {
+                        "name": "size",
+                        "value": "0x80",
+                        "tag": "concrete"
+                    },
+                    {
+                        "name": "buf",
+                        "value": "0x7fffffffffefed0",
+                        "tag": []
+                    },
+                    {
+                        "name": "content",
+                        "value": "0x3030303330303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030",
+                        "tag": []
+                    }
+                ],
+                "current_byte_offset": 320,
+                "exe_num": 1
+            },
+            {
+                "operation_name": "free_object",
+                "operation_correlation": [
+                    {
+                        "name": "free_addr",
+                        "value": "0xc0000f20",
+                        "tag": []
+                    }
+                ],
+                "current_byte_offset": 320,
+                "exe_num": 1
+            }
+        ]
+    }
+]

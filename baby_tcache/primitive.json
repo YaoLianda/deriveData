@@ -1,0 +1,199 @@
+[
+    {
+        "ins_index": 0,
+        "ins_type": "Compound_ins",
+        "ins_num": 3,
+        "ops": [
+            {
+                "op_index": 0,
+                "op_name": "symtag1",
+                "op_input_byte": "0001000000000000",
+                "type": "fixed"
+            },
+            {
+                "op_index": 1,
+                "op_name": "symtag2",
+                "op_input_byte": "0008000000000000",
+                "type": "input"
+            },
+            {
+                "op_index": 2,
+                "op_name": "symtag3",
+                "op_input_byte": "11111111",
+                "type": "input"
+            }
+        ],
+        "max_use_num": 10,
+        "depend_index": -1,
+        "primitive": [
+            {
+                "operation_name": "read_object",
+                "operation_correlation": [
+                    {
+                        "name": "size",
+                        "value": "0x10",
+                        "tag": "concrete"
+                    },
+                    {
+                        "name": "buf",
+                        "value": "0x7fffffffffeff10",
+                        "tag": []
+                    },
+                    {
+                        "name": "content",
+                        "value": "0x30303031303030303030303030303030",
+                        "tag": []
+                    }
+                ],
+                "current_byte_offset": 16,
+                "exe_num": 1
+            },
+            {
+                "operation_name": "read_object",
+                "operation_correlation": [
+                    {
+                        "name": "size",
+                        "value": "0x10",
+                        "tag": "concrete"
+                    },
+                    {
+                        "name": "buf",
+                        "value": "0x7fffffffffefee0",
+                        "tag": []
+                    },
+                    {
+                        "name": "content",
+                        "value": "0x30303038303030303030303030303030",
+                        "tag": []
+                    }
+                ],
+                "current_byte_offset": 32,
+                "exe_num": 1
+            },
+            {
+                "operation_name": "malloc_object",
+                "operation_correlation": [
+                    {
+                        "name": "size",
+                        "value": [
+                            "0x8",
+                            "0x8"
+                        ],
+                        "tag": "symbolic"
+                    },
+                    {
+                        "name": "ret_addr",
+                        "value": "0xc0000f20",
+                        "tag": []
+                    }
+                ],
+                "current_byte_offset": 32,
+                "exe_num": 1
+            },
+            {
+                "operation_name": "read_object",
+                "operation_correlation": [
+                    {
+                        "name": "size",
+                        "value": [
+                            "0x8",
+                            "0x8"
+                        ],
+                        "tag": "symbolic"
+                    },
+                    {
+                        "name": "buf",
+                        "value": "0xc0000f20",
+                        "tag": []
+                    },
+                    {
+                        "name": "content",
+                        "value": "0x3131313131313131",
+                        "tag": []
+                    }
+                ],
+                "current_byte_offset": 40,
+                "exe_num": 1
+            }
+        ]
+    },
+    {
+        "ins_index": 1,
+        "ins_type": "Compound_ins",
+        "ins_num": 2,
+        "ops": [
+            {
+                "op_index": 3,
+                "op_name": "symtag4",
+                "op_input_byte": "0002000000000000",
+                "type": "fixed"
+            },
+            {
+                "op_index": 4,
+                "op_name": "symtag5",
+                "op_input_byte": "0000000000000000",
+                "type": "input"
+            }
+        ],
+        "max_use_num": 10,
+        "depend_index": 0,
+        "primitive": [
+            {
+                "operation_name": "read_object",
+                "operation_correlation": [
+                    {
+                        "name": "size",
+                        "value": "0x10",
+                        "tag": "concrete"
+                    },
+                    {
+                        "name": "buf",
+                        "value": "0x7fffffffffeff10",
+                        "tag": []
+                    },
+                    {
+                        "name": "content",
+                        "value": "0x30303032303030303030303030303030",
+                        "tag": []
+                    }
+                ],
+                "current_byte_offset": 56,
+                "exe_num": 1
+            },
+            {
+                "operation_name": "read_object",
+                "operation_correlation": [
+                    {
+                        "name": "size",
+                        "value": "0x10",
+                        "tag": "concrete"
+                    },
+                    {
+                        "name": "buf",
+                        "value": "0x7fffffffffefef0",
+                        "tag": []
+                    },
+                    {
+                        "name": "content",
+                        "value": "0x30303030303030303030303030303030",
+                        "tag": []
+                    }
+                ],
+                "current_byte_offset": 72,
+                "exe_num": 1
+            },
+            {
+                "operation_name": "free_object",
+                "operation_correlation": [
+                    {
+                        "name": "free_addr",
+                        "value": "0xc0000f20",
+                        "tag": []
+                    }
+                ],
+                "current_byte_offset": 72,
+                "exe_num": 1
+            }
+        ]
+    }
+]
